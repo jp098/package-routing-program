@@ -69,10 +69,10 @@ class Package:
         self.delivery_time = None
 
     #Updates the status of the package
-    def update_status(self, currentTime):
-        if self.delivery_time and currentTime >= self.delivery_time:
+    def update_status(self, current_time):
+        if self.delivery_time and current_time >= self.delivery_time:
             self.status = "Delivered"
-        elif self.departure_time and currentTime >= self.departure_time:
+        elif self.departure_time and current_time >= self.departure_time:
             self.status = "En Route"
         else:
             self.status = "At the Hub"
@@ -81,3 +81,18 @@ class Package:
         return (f"Package ID: {self.package_id}, Address: {self.address}, {self.city}, {self.state}, {self.zip_code}, "
                 f"Deadline: {self.deadline}, Weight: {self.weight} KILO, Status: {self.status}, "
                 f"Departure Time: {self.departure_time}, Delivery Time: {self.delivery_time}")
+
+#Creates the truck object
+class Truck:
+    def __init__(self, truck_id, speed=18):
+        self.truck_id = truck_id
+        self.speed = speed
+        self.mileage = 0.0
+        self.current_location = "4001 South 700 East"
+        self.departure_time = None
+        self.packages = []
+
+    def __str__(self):
+        return (f"Truck ID: {self.truck_id}, Speed: {self.speed} mph, Mileage: {self.mileage:.2f} miles, "
+                f"Current Location: {self.current_location}, Departure Time: {self.departure_time}, "
+                f"Packages on Truck: {[p.package_id for p in self.packages]}")
