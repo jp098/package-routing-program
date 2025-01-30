@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19973f1c-4a2c-4fad-b450-2f2a285d9e6e" name="Changes" comment="Creates CSV files and main.py">
+    <list default="true" id="19973f1c-4a2c-4fad-b450-2f2a285d9e6e" name="Changes" comment="Creates the ChainingHashTable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -75,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738188116887</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creates the ChainingHashTable">
+      <option name="closed" value="true" />
+      <created>1738191485084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738191485084</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creates CSV files and main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates CSV files and main.py" />
+    <MESSAGE value="Creates the ChainingHashTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creates the ChainingHashTable" />
   </component>
 </project>
