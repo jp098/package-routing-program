@@ -1,7 +1,8 @@
+#StudentID: 012029709
+#StudentName: Jair Palacios
+
 import csv
 import datetime
-
-#Import CSV files data
 
 #Source: C950-Webinar-1-Let's Go Hashing Webinar)
 #Hash Table with chaining
@@ -96,3 +97,76 @@ class Truck:
         return (f"Truck ID: {self.truck_id}, Speed: {self.speed} mph, Mileage: {self.mileage:.2f} miles, "
                 f"Current Location: {self.current_location}, Departure Time: {self.departure_time}, "
                 f"Packages on Truck: {[p.package_id for p in self.packages]}")
+
+def load_package_data(file_name, hash_table):
+    with open(file_name) as csv_file:
+        reader = csv.DictReader(csv_file)
+
+        for row in reader:
+            package_id = int(row["PackageID"])
+            address = row["Address"]
+            city = row["City"]
+            state = row["State"]
+            zip_code = row["Zip"]
+            deadline = row["DeliveryDeadline"]
+            weight = int(row["WeightKILO"])
+            notes = row["SpecialNotes"]
+
+            package = Package(package_id, address, city, state, zip_code, deadline, weight, notes)
+            hash_table.insert(package_id, package)
+
+def load_distance_data(file_name):
+    with open(file_name) as csv_file:
+        reader = csv.reader(csv_file)
+        distance_data = list(reader)
+    return distance_data
+
+def load_address_data(file_name):
+    with open(file_name) as csv_file:
+        reader = csv.reader(csv_file)
+        address_data = [row[0] for row in reader]
+    return address_data
+
+def calculate_distance(starting_address, destination_address, distance_matrix):
+    distance = distance_matrix[starting_address][destination_address]
+    if distance == '':
+        distance = distance_matrix[destination_address][starting_address]
+    return float(distance)
+
+def truck_delivery_route(truck, hash_table, address_data, distance_matrix):
+    current_location = address_data.index(truck.current_location)
+    total_distance = 0.0
+
+    while truck.packages:
+        nearest_package_id = None
+        nearest_distance = float('inf')
+
+        for package_id in truck.packages:
+            package = hash_table.search(package_id)
+            destination_index = address_data.index(package.address)
+            distance_to_package = calculate_distance(current_location, destination_index, distance_matrix)
+
+            #Check if this package is closer than the current nearest package
+            if distance_to_package < nearest_distance:
+                nearest_package_id = package_id
+                nearest_distance = distance_to_package
+
+        #Deliver the nearest package
+        truck.packages.remove(nearest_package_id)
+
+        #Update truck mileage and location
+        total_distance += nearest_distance
+        current_location = address_data.index(hash_table.search(nearest_package_id).address)
+
+    #Update total mileage for the truck after all deliveries
+    truck.mileage += total_distance
+
+    #Initialize variables and load data
+    package_hash_table = ChainingHashTable
+    load_package_data("packageCSV.csv", package_hash_table)
+
+    distance_matrix = load_distance_data("distanceCSV.csv")
+
+    address_data = load_address_data("addressCSV.csv")
+
+    truck1
