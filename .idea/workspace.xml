@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19973f1c-4a2c-4fad-b450-2f2a285d9e6e" name="Changes" comment="Creates functions for loading data, calculating distance, and routing">
+    <list default="true" id="19973f1c-4a2c-4fad-b450-2f2a285d9e6e" name="Changes" comment="Creates GUI and functions to retrieve user input">
+      <change beforePath="$PROJECT_DIR$/.idea/WGU_RoutingProgram.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/packageCSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/packageCSV.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/addressCSV.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/addressCSV.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,39 +26,109 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jp098"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jp098&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jp098/WGU_RoutingProgram.git",
-    "accountId": "50c299b7-0fe6-4532-82ed-5297f5246552"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jp098/WGU_RoutingProgram.git&quot;,
+    &quot;accountId&quot;: &quot;950c86da-c290-44ac-8396-8353152b21ef&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.000607354264815" />
+      <entry key="MS500" value="1.3715970972571583" />
+      <entry key="S2" value="2.3085195196387778" />
+      <entry key="S5" value="2.6873622837307263" />
+      <entry key="S10" value="2.836956474387054" />
+      <entry key="S30" value="2.944084383133113" />
+      <entry key="S60" value="2.97213243466095" />
+      <entry key="M2" value="3.027643769526163" />
+      <entry key="M5" value="4.162860357686318" />
+      <entry key="M10" value="7.959551197822135" />
+      <entry key="M15" value="12.12522764009403" />
+      <entry key="M30" value="25.111068703960086" />
+      <entry key="H1" value="70.24466040407826" />
+      <entry key="H2" value="219.75488271013694" />
+      <entry key="H4" value="554.3840468000635" />
+      <entry key="D1" value="1645.1735217233133" />
+      <entry key="W1" value="2052.7112877564973" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.091813000299873E-121" />
+      <entry key="S5" value="6.5325962263592864E-49" />
+      <entry key="S10" value="1.343579635172882E-24" />
+      <entry key="S30" value="2.273995169641361E-8" />
+      <entry key="S60" value="2.609609349317179E-4" />
+      <entry key="M2" value="0.028438214748614632" />
+      <entry key="M5" value="0.5557243284860833" />
+      <entry key="M10" value="1.7551223508954377" />
+      <entry key="M15" value="2.6900202333305976" />
+      <entry key="M30" value="4.281445127185076" />
+      <entry key="H1" value="6.074757790831018" />
+      <entry key="H2" value="10.229348017866442" />
+      <entry key="H4" value="18.91737662148328" />
+      <entry key="D1" value="45.49596213047398" />
+      <entry key="W1" value="55.135291933908796" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9732307542841111" />
+      <entry key="MS500" value="1.3601240760820876" />
+      <entry key="S2" value="2.3014084704128495" />
+      <entry key="S5" value="2.683802121130943" />
+      <entry key="S10" value="2.835033560248266" />
+      <entry key="S30" value="2.9434091836010827" />
+      <entry key="S60" value="2.9720477071909945" />
+      <entry key="M2" value="3.0557086707090666" />
+      <entry key="M5" value="4.71676539943219" />
+      <entry key="M10" value="9.71128657416599" />
+      <entry key="M15" value="14.811255253663067" />
+      <entry key="M30" value="29.38559589656591" />
+      <entry key="H1" value="76.29713874588572" />
+      <entry key="H2" value="229.93813509337826" />
+      <entry key="H4" value="573.2433837748155" />
+      <entry key="D1" value="1690.6438994918924" />
+      <entry key="W1" value="2107.8421506685027" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2sBxs2lUjJuX69N6lrNcrvT5vah" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
       </set>
     </attachedChunks>
   </component>
@@ -68,6 +140,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737942972812</updated>
+      <workItem from="1787944719669" duration="32335000" />
+      <workItem from="1788137433937" duration="14477000" />
+      <workItem from="1788153754625" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="Creates CSV files and main.py">
       <option name="closed" value="true" />
@@ -109,8 +184,19 @@
       <option name="project" value="LOCAL" />
       <updated>1738380681030</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creates GUI and functions to retrieve user input">
+      <option name="closed" value="true" />
+      <created>1738462934823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738462934823</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -129,6 +215,11 @@
     <MESSAGE value="Creates the Package Object" />
     <MESSAGE value="Creates the Truck Object" />
     <MESSAGE value="Creates functions for loading data, calculating distance, and routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates functions for loading data, calculating distance, and routing" />
+    <MESSAGE value="Creates GUI and functions to retrieve user input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creates GUI and functions to retrieve user input" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1788152575178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FD_RoutingProgram$main.coverage" NAME="main Coverage Results" MODIFIED="1787978959419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../WGU/C950 Data Structure &amp; Algorithms 2/PackageRoutingProgram/PackageRoutingProgram" />
   </component>
 </project>
